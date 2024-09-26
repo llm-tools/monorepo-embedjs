@@ -1,0 +1,19 @@
+{
+  "name": "@llm-tools/embedjs",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "embedjs/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/embedjs",
+        "main": "embedjs/src/index.ts",
+        "tsConfig": "embedjs/tsconfig.lib.json",
+        "assets": ["embedjs/*.md"]
+      }
+    }
+  }
+}
